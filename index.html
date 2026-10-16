@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Future</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </head>
+  <body>
+    <nav class="menu">
+      <div class="logo">🦋 My Future</div>
+      <div class="links">
+        <a href="#inicio">Início</a>
+        <a href="#orientacao">Sobre Nós</a>
+        <a href="#colecoes">Caminhos e Possibilidades</a>
+        <a href="#promocoes">Promoções</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </nav>
+
+    <section id="inicio" class="banner">
+      <img src="Mídia (2).jpg" alt="Banner ZAYRE" class="banner-img">
+    </section>
+
+    <!-- SEÇÃO ORIENTAÇÃO -->
+    <section id="orientacao" class="orientacao">
+      <div class="orientacao-conteudo">
+        <div class="orientacao-texto">
+          <span class="tagline">✦ ORIENTAÇÃO PARA O PÓS-ENSINO MÉDIO</span>
+          <h1>Não encontre uma resposta.<br><span>Construa um caminho.</span></h1>
+          <p>A My transforma dúvidas sobre o futuro em experiências, comparações e escolhas conscientes para a sua realidade.</p>
+        </div>
+        <div class="orientacao-card">
+
+          <img src="Billie Eilish.gif" alt="Billie Eilish" class="card-gif">
+
+          <div class="music-player">
+            <button id="playBtn" class="play-btn">
+              <i class="fa-solid fa-play"></i>
+            </button>
+
+            <div class="music-info">
+              <div class="music-title">My Future - Billie Eilish</div>
+
+              <input type="range" id="progress" value="0" min="0" max="100">
+
+              <div class="music-time">
+                <span id="currentTime">0:00</span>
+                <span id="duration">0:00</span>
+              </div>
+            </div>
+
+            <audio id="audio">
+              <source src="Billie Eilish - My Future.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO CAMINHOS / ORIENTAÇÃO -->
+    <section id="colecoes" class="colecoes">
+      <h2>Caminhos e Possibilidades</h2>
+      <div class="cards">
+        
+        <!-- CARD 1: MERCADO DE TRABALHO -->
+        <div class="card">
+          <img src="ícone_mercado de trabalho.jpg" alt="Mercado de Trabalho" style="padding: 20px; height: 180px; object-fit: contain;">
+          <h3>Mercado de Trabalho</h3>
+          <p>Descubra oportunidades de primeiro emprego e entrada no mercado.</p>
+          <a href="mercado-de-trabalho.html"><button>Saiba mais</button></a>
+        </div>
+
+        <!-- CARD 2: CONCURSO PÚBLICO -->
+        <div class="card">
+          <img src="ícone_concurso púbico.jpg" alt="Concurso Público" style="padding: 20px; height: 180px; object-fit: contain;">
+          <h3>Concurso Público</h3>
+          <p>Entenda sobre edital, rotinas de estudo e estabilidade na carreira.</p>
+          <a href="concurso-publico.html"><button>Saiba mais</button></a>
+        </div>
+
+        <!-- CARD 3: CURSO TÉCNICO -->
+        <div class="card">
+          <img src="ícone_curso técnico.jpg" alt="Curso Técnico" style="padding: 20px; height: 180px; object-fit: contain;">
+          <h3>Curso Técnico</h3>
+          <p>Formação prática e rápida para inserção direta na área de interesse.</p>
+          <a href="curso-tecnico.html"><button>Saiba mais</button></a>
+        </div>
+
+        <!-- CARD 4: CURSO SUPERIOR -->
+        <div class="card">
+          <img src="ícone_curso superior.jpg" alt="Curso Superior" style="padding: 20px; height: 180px; object-fit: contain;">
+          <h3>Curso Superior</h3>
+          <p>Explore opções de faculdade, graduação, vestibulares e bolsas.</p>
+          <a href="curso-superior.html"><button>Saiba mais</button></a>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="promocoes" class="promocoes">
+      <h2>Promoção da semana</h2>
+      <div class="promo-box">
+        <h3>Kit especial</h3>
+        <p>Leve duas calças jeans e ganhe uma camiseta.</p>
+        <h1>R$ 299,99</h1>
+      </div>
+    </section>
+
+    <section id="diferenciais" class="diferenciais">
+      <h2>Por que escolher a ZAYRE?</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>👚 Produtos de qualidade</h3>
+          <p>Produção feita pensando na qualidade da roupa e durabilidade.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="galeria">
+      <h2>Galeria</h2>
+      <div class="fotos">
+        <img src="https://images.unsplash.com/photo-1520975929710-9b6b5d4d3d7a?q=80&w=687&auto=format&fit=crop" alt="foto1">
+        <img src="https://images.unsplash.com/photo-1526178618850-5a6f59f9a5d9?q=80&w=688&auto=format&fit=crop" alt="foto2">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=736&auto=format&fit=crop" alt="foto3">
+      </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+      <h2>Sobre Nós</h2>
+      <p>A ZAYRE nasceu com o objetivo de entregar roupas estilosas para os clientes.</p>
+      <p>Nosso compromisso é entregar uma experiência única aos nossos clientes unindo conforto e qualidade.</p>
+    </section>
+
+    <section class="avaliacoes">
+      <h2>Avaliações</h2>
+      <div class="depoimentos">
+        <div class="depoimento">⭐⭐⭐⭐⭐<p>Roupas de qualidade e duradouras</p></div>
+        <div class="depoimento">⭐⭐⭐⭐⭐<p>Roupas bonitas e de qualidade, atendimento maravilhoso</p></div>
+        <div class="depoimento">⭐⭐⭐⭐⭐<p>Com certeza comprarei novamente, atendimento maravilhoso</p></div>
+      </div>
+    </section>
+
+    <section class="carrinho">
+      <h2>Meu Pedido</h2>
+      <ul id="lista-pedidos"></ul>
+      <p class="total">Total: R$ <span id="total">0,00</span></p>
+      <button onclick="finalizarPedido()">Finalizar Pedido</button>
+    </section>
+
+    <section id="contato" class="contato">
+      <h2>Entre em contato</h2>
+      <form onsubmit="event.preventDefault(); alert('Mensagem enviada!');">
+        <input type="text" placeholder="Seu nome" required>
+        <input type="email" placeholder="Seu e-mail" required>
+        <textarea rows="5" placeholder="Sua mensagem"></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <footer>
+      <h3>🛍️ loja de roupas ZAYRE</h3>
+      <p>📍 Rua do estilo, 456 - São Paulo</p>
+      <p>📞 (11)99999-9999</p>
+      <p>⏰ Terça a Domingo - 11h às 20h</p>
+      <p>2026 - Todos os direitos reservados</p>
+    </footer>
+
+    <a href="https://wa.me/5511999999999" class="whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+
+    <div class="mapa">
+      <h3>📍Nossa Localização</h3>
+      <iframe src="https://www.google.com/maps?q=Rua%20das%20Del%C3%ADcias%2C%20123%20-%20S%C3%A3o%20Paulo&output=embed" allowfullscreen loading="lazy"></iframe>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
