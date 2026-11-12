@@ -1,0 +1,470 @@
+/* Complementos visuais: preservam as regras de layout originais do projeto. */
+:root {
+  --mf-plum: #32152f;
+  --mf-pink: #d63384;
+  --mf-pink-dark: #a83262;
+  --mf-pink-soft: #fff0f6;
+  --mf-text: #30232b;
+}
+
+body {
+  color: var(--mf-text);
+  font-family: "DM Sans", "Segoe UI", Arial, sans-serif;
+  background-color: #fff8f0;
+  background-image: radial-gradient(ellipse at 8% 12%, rgba(214, 51, 132, .055), transparent 35%);
+}
+
+h1, h2, h3, .logo, .tagline {
+  font-family: Outfit, "DM Sans", Arial, sans-serif;
+}
+
+.menu {
+  background: linear-gradient(110deg, #261620, var(--mf-plum) 60%, #5a1d49);
+}
+
+.logo, footer h3 {
+  color: #ff9bc7;
+}
+
+.links a:hover,
+.links a:focus-visible {
+  color: #ffaad0;
+}
+
+button, .btn, .btn-voltar, .card button {
+  background-color: var(--mf-pink);
+}
+
+button:hover, .btn:hover, .btn-voltar:hover, .card button:hover {
+  background-color: var(--mf-pink-dark);
+}
+
+footer {
+  background: linear-gradient(110deg, #261620, #4d1b3c);
+}
+
+/* Um pouco mais de respiro entre blocos de conteúdo, sem alterar sua estrutura. */
+.conteudo-secao > h1 {
+  margin-bottom: 22px;
+  line-height: 1.2;
+}
+
+.conteudo-secao h2 {
+  margin-top: 28px;
+  margin-bottom: 20px;
+  color: var(--mf-pink-dark);
+}
+
+.conteudo-secao p {
+  margin-bottom: 22px;
+  line-height: 1.8;
+}
+
+.conteudo-secao ul,
+.conteudo-secao ol {
+  margin-top: 18px;
+  margin-bottom: 26px;
+}
+
+.conteudo-secao li {
+  margin-bottom: 10px;
+  line-height: 1.7;
+}
+
+/* Fundo suave que aparece nos intervalos entre seções; banners e cards originais ficam intactos. */
+main {
+  background-image: radial-gradient(ellipse at 12% 8%, rgba(246, 205, 225, .22), transparent 42%);
+}
+
+/* GIFs reaproveitados da referência, em moldura leve para acompanhar o layout existente. */
+.gif-feature {
+  float: right;
+  width: clamp(145px, 21vw, 210px);
+  margin: 4px 0 20px 24px;
+  padding: 9px;
+  border: 1px solid #f2c2d9;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .92);
+  box-shadow: 0 10px 28px rgba(97, 28, 65, .12);
+}
+
+.gif-feature img {
+  display: block;
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.gif-feature figcaption {
+  padding: 8px 3px 1px;
+  color: #79596b;
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+/* Player flutuante usado nas páginas internas. */
+.global-music-dock {
+  position: fixed;
+  z-index: 1200;
+  right: 22px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: min(330px, calc(100vw - 28px));
+  padding: 11px 13px;
+  color: #382331;
+  background: rgba(255, 249, 252, .97);
+  border: 1px solid #f0c0d6;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(74, 25, 52, .18);
+  backdrop-filter: blur(10px);
+}
+
+.global-play-btn {
+  display: grid;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--mf-pink);
+  cursor: pointer;
+}
+
+.global-music-meta {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+  gap: 2px;
+}
+
+.global-music-meta strong {
+  color: var(--mf-pink-dark);
+  font-size: 13px;
+}
+
+.global-music-meta span {
+  color: #79596b;
+  font-size: 11px;
+}
+
+.global-progress {
+  width: 100%;
+  height: 4px;
+  margin-top: 4px;
+  accent-color: var(--mf-pink);
+  cursor: pointer;
+}
+
+.global-progress-track {
+  height: 3px;
+  overflow: hidden;
+  border-radius: 3px;
+  background: #f3d8e5;
+}
+
+.global-progress-track span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: var(--mf-pink);
+}
+
+.global-music-clock {
+  color: #79596b;
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Assistente virtual de navegação. */
+.mf-assistant {
+  position: fixed;
+  z-index: 1300;
+  left: 20px;
+  bottom: 22px;
+  font-family: "DM Sans", "Segoe UI", Arial, sans-serif;
+}
+
+.mf-assistant-launcher {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 48px;
+  padding: 0 17px;
+  border: 1px solid rgba(255, 255, 255, .75);
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(115deg, #7544aa, var(--mf-pink));
+  box-shadow: 0 9px 22px rgba(91, 48, 117, .24);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mf-assistant-launcher:hover,
+.mf-assistant-launcher:focus-visible {
+  filter: brightness(1.06);
+}
+
+.mf-assistant-icon {
+  font-size: 19px;
+}
+
+.mf-chat-panel {
+  position: absolute;
+  left: 0;
+  bottom: 59px;
+  display: flex;
+  flex-direction: column;
+  width: min(370px, calc(100vw - 32px));
+  max-height: min(560px, calc(100vh - 190px));
+  overflow: hidden;
+  border: 1px solid #e7c8ed;
+  border-radius: 18px;
+  color: #33233b;
+  background: #fff;
+  box-shadow: 0 18px 42px rgba(54, 25, 68, .2);
+}
+
+.mf-chat-panel[hidden] { display: none; }
+
+.mf-chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  color: #fff;
+  background: linear-gradient(110deg, #5c327f, #a84b9b 62%, var(--mf-pink));
+}
+
+.mf-chat-heading { display: grid; gap: 2px; }
+.mf-chat-heading strong { font-size: 15px; }
+.mf-chat-heading span { color: rgba(255,255,255,.84); font-size: 11px; }
+
+.mf-chat-close {
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid rgba(255,255,255,.45);
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(255,255,255,.13);
+  cursor: pointer;
+}
+
+.mf-chat-content { padding: 15px; overflow: auto; }
+
+.mf-chat-message {
+  margin: 0 0 11px;
+  padding: 11px 12px;
+  border-radius: 14px 14px 14px 4px;
+  color: #49344f;
+  background: #f7f0fa;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.mf-chat-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 11px 0 14px;
+}
+
+.mf-chat-suggestion {
+  padding: 7px 10px;
+  border: 1px solid #e6cee9;
+  border-radius: 999px;
+  color: #643b7e;
+  background: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mf-chat-suggestion:hover { background: #f8effb; }
+
+.mf-chat-form {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0;
+}
+
+.mf-chat-input {
+  min-width: 0;
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #dfcbe3;
+  border-radius: 12px;
+  color: #33233b;
+  background: #fff;
+  font: inherit;
+  font-size: 13px;
+}
+
+.mf-chat-form button {
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  border-radius: 12px;
+  color: #fff;
+  background: linear-gradient(135deg, #7544aa, var(--mf-pink));
+  cursor: pointer;
+}
+
+.mf-chat-results { display: grid; gap: 7px; margin-top: 11px; }
+
+.mf-chat-result-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid #f0d9e9;
+  border-radius: 12px;
+  color: #71366e;
+  background: #fff8fc;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.mf-chat-note {
+  margin: 10px 1px 0;
+  color: #7b6b7f;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+/* Transição curta de borboletas, ativada apenas nos links dos cards da home. */
+.mf-page-loader {
+  position: fixed;
+  z-index: 2200;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  background: rgba(255, 249, 252, .34);
+  backdrop-filter: blur(1.5px);
+  animation: mf-loader-fade 520ms ease-out both;
+}
+
+.mf-loader-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  padding: 12px 17px;
+  border: 1px solid #edcfe1;
+  border-radius: 999px;
+  color: #53335f;
+  background: rgba(255,255,255,.96);
+  box-shadow: 0 10px 28px rgba(84, 43, 99, .18);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.mf-loader-butterflies { display: inline-flex; align-items: center; height: 31px; }
+.mf-loader-butterfly { display: block; width: 30px; height: 27px; overflow: visible; animation: mf-loader-float 880ms ease-in-out infinite alternate; }
+.mf-loader-butterfly--two { width: 33px; height: 29px; animation-delay: -180ms; }
+.mf-loader-butterfly--three { width: 27px; height: 25px; animation-delay: -360ms; }
+.mf-loader-wing--left, .mf-loader-wing--right { transform-box: view-box; transform-origin: 50% 50%; animation: mf-loader-flap 210ms ease-in-out infinite alternate; }
+.mf-wing--upper-left { fill: #d879c8; }
+.mf-wing--lower-left { fill: #ef9acb; }
+.mf-wing--upper-right { fill: #ed73ad; }
+.mf-wing--lower-right { fill: #bf82d5; }
+.mf-loader-body { fill: none; stroke: #5c327f; stroke-width: 2.8; stroke-linecap: round; }
+.mf-loader-antenna { fill: none; stroke: #5c327f; stroke-width: 1.7; stroke-linecap: round; }
+.mf-loader-label { white-space: nowrap; }
+
+@keyframes mf-loader-fade { 0% { opacity: 0; } 16%, 72% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes mf-loader-flap { from { transform: scaleX(1); } to { transform: scaleX(.58); } }
+@keyframes mf-loader-float { from { transform: translateY(2px) rotate(-3deg); } to { transform: translateY(-3px) rotate(3deg); } }
+
+@media (max-width: 680px) {
+  .gif-feature { float: none; width: min(210px, 74%); margin: 4px auto 22px; }
+  .mf-assistant { left: 13px; bottom: 122px; }
+  .mf-chat-panel { max-height: min(520px, calc(100vh - 270px)); }
+  .global-music-dock { right: 12px; bottom: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mf-page-loader { animation: none; opacity: .95; }
+  .mf-loader-butterfly, .mf-loader-wing--left, .mf-loader-wing--right { animation: none; }
+}
+
+
+/* Ajustes solicitados: retorno sem bloco rosa e títulos principais em preto. */
+.conteudo-secao .btn-voltar {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: #a83262 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.conteudo-secao .btn-voltar:hover,
+.conteudo-secao .btn-voltar:focus-visible {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: #000 !important;
+  box-shadow: none !important;
+  transform: none;
+}
+
+h1,
+h1 span {
+  color: #000 !important;
+  background: none !important;
+  background-image: none !important;
+  -webkit-text-fill-color: #000 !important;
+}
+
+/* Galeria acrescentada à página de empreendedorismo. */
+.empreendedorismo-galeria {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.empreendedorismo-galeria .gif-feature {
+  float: none;
+  width: 100%;
+  margin: 0;
+}
+
+@media (max-width: 680px) {
+  .empreendedorismo-galeria { grid-template-columns: 1fr; }
+}
+
+
+/* Correção exclusiva do botão/link de retorno à página inicial. */
+a.btn-voltar,
+a.btn-voltar:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+a.btn-voltar:hover {
+  color: #000 !important;
+}

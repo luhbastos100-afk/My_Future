@@ -1,0 +1,336 @@
+
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 130px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1d1d1d;
+    line-height: 1.6;
+    padding-top: 70px;
+}
+
+/* ==========================================================================
+   MENU FIXO
+   ========================================================================== */
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 70px;
+    background-color: #000;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    z-index: 1000;
+}
+
+.logo {
+    color: hotpink;
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.links a {
+    color: beige;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.links a:hover {
+    color: hotpink;
+}
+
+/* ==========================================================================
+   BARRA DE ATALHOS
+   ========================================================================== */
+
+.bar-atalhos {
+    position: sticky;
+    top: 70px;
+    z-index: 900;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    width: 100%;
+    padding: 12px 40px;
+
+    background-color: #111;
+
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.bar-atalhos::-webkit-scrollbar {
+    display: none;
+}
+
+.bar-atalhos a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 6px 16px;
+
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+
+    border: 1px solid #333;
+    border-radius: 20px;
+
+    white-space: nowrap;
+    transition: all 0.2s;
+}
+
+.bar-atalhos a:hover {
+    color: #fff;
+    background-color: hotpink;
+    border-color: hotpink;
+}
+
+/* ==========================================================================
+   SEÇÕES GERAIS E CORES DIFERENTES DE FUNDO
+   ========================================================================== */
+section {
+  padding: 80px 40px;
+}
+
+section h2 {
+  font-size: 32px;
+  margin-bottom: 25px;
+  font-family: Georgia, serif;
+}
+
+section h3 {
+  font-size: 22px;
+  margin: 30px 0 15px 0;
+}
+
+section p {
+  font-size: 17px;
+  margin-bottom: 18px;
+  line-height: 1.7;
+}
+
+section ul {
+  margin: 15px 0 25px 25px;
+}
+
+section li {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+/* Cores de fundo independentes para cada seção */
+#curso {
+  background-color: #fff8f0;
+  color: #1d1d1d;
+}
+#curso h2, #curso h3 { color: #a83262; }
+
+#articulacao {
+  background-color: #fce4ec;
+  color: #2b1d24;
+}
+#articulacao h2, #articulacao h3 { color: #880e4f; }
+
+#eixos {
+  background-color: #ffffff;
+  color: #1d1d1d;
+}
+#eixos h2, #eixos h3 { color: #d81b60; }
+
+#instituicoes {
+  background-color: #f4e8df;
+  color: #212529;
+}
+#instituicoes h2, #instituicoes h3 { color: #ad1457; }
+
+/* Container Interno */
+.conteudo-interno {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Botão Voltar */
+.btn-voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #a83262;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.btn-voltar:hover {
+  color: deeppink;
+}
+
+/* Blocos de Texto e Pills */
+.bloco-texto-corrido {
+  margin-bottom: 25px;
+}
+
+.pills-container {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.pill {
+  background: #a83262;
+  color: #fff;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   BANNER
+   ========================================================================== */
+.banner {
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+}
+ 
+.banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+ 
+.btn {
+  background-color: deeppink;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* ==========================================================================
+   RODAPÉ
+   ========================================================================== */
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+footer h3 {
+  color: hotpink;
+  margin-bottom: 10px;
+}
+
+footer p {
+  color: #ccc;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.referencia {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #777;
+}
+
+.referencia a {
+  color: deeppink;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE
+   ========================================================================== */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    padding: 15px;
+  }
+  .links {
+    margin-top: 10px;
+  }
+  .links a {
+    margin: 6px;
+    font-size: 14px;
+  }
+  section {
+    padding: 50px 20px;
+  }
+}
+
+
+/* Título principal */
+#curso h1 {
+    color: #000;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Título rosa centralizado */
+#curso h2 {
+    color: #a83262;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* TÍTULOS ROSAS CENTRALIZADOS COM FONTE ARIAL */
+
+#articulacao h2,
+#articulacao h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #880e4f;
+}
+
+/* TÍTULOS DA SEÇÃO ENTREVISTAS */
+#instituicoes h2,
+#instituicoes h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #ad1457;
+}
+
+/* TÍTULOS DA SEÇÃO VAGAS */
+#eixos h2,
+#eixos h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #d81b60;
+}
